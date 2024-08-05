@@ -1,0 +1,47 @@
+@import "@/styles/common/reset";
+@import "@/styles/common/app";
+@import "@/styles/common/button";
+@import "@/styles/common/selectTree";
+@import "@/styles/theme/layout";
+@import "@/styles/theme/icon-selector";
+@import "@/styles/element/index";
+
+.layout-main {
+
+  .main-container-none {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    padding: 15px 15px 5px !important;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .main-container-scrollbar {
+    overflow: hidden;
+    height: 100%;
+    padding: 15px 15px 5px !important;
+    @extend .flex;
+  }
+
+  .main-container-auto {
+    height: inherit;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-container-view {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--xht-bg-color);
+    border: 1px solid var(--xht-border-color);
+    border-radius: var(--xht-border-radius-base);
+  }
+
+}

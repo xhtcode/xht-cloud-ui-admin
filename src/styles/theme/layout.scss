@@ -1,0 +1,185 @@
+.layout-container {
+  @extend .vwh-100;
+  overflow: hidden;
+
+  .layout-aside {
+    box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+    z-index: 1;
+    height: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden !important;
+
+    .el-scrollbar__view {
+      overflow: hidden;
+    }
+
+    .el-menu {
+      border: none;
+    }
+  }
+
+  .layout-header {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+      0 0 3px 0 rgba(0, 0, 0, 0.06);
+    height: $header-height;
+
+    .layout-header-info {
+      height: $header-height;
+      @extend .flex;
+      align-items: center;
+    }
+
+    .layout-aside-setting {
+      @extend .flex-center;
+
+      .layout-aside-setting-item {
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+        height: $header-height;
+        line-height: $header-height;
+        color: var(--el-text-color);
+        @extend .button-hover;
+      }
+    }
+  }
+
+  .header-container-tags {
+    user-select: none !important;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--xht-border-color);
+    box-shadow: 6px 2px 3px 0 rgb(0 0 0 / 12%),
+      0 0 3px 0 rgb(0 0 0 / 6%);
+
+    .tags-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+
+      :deep(.el-scrollbar__view) {
+        height: 100%;
+      }
+
+      .tags-container-view-tool {
+        position: relative;
+        display: flex;
+        place-content: center center;
+        place-items: center center;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+
+        .tags-view-tool-icon-hover {
+          &:hover {
+            color: var(--el-color-primary) !important;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 1px);
+          content: '';
+          border-left: 1px solid var(--el-border-color);
+        }
+      }
+
+      .tags-container-view-tool-first {
+        &::before {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 1px);
+          content: '';
+          border-right: 1px solid var(--el-border-color);
+          border-left: none;
+        }
+      }
+
+      .tags-view-item {
+        height: calc(100% - 8px);
+        padding-right: 25px;
+        margin-left: 4px;
+        font-size: 12px;
+        cursor: pointer;
+        border: 1px solid var(--el-border-color);
+        border-radius: 2px;
+
+        .tags-view-item-close {
+          position: absolute;
+          top: 50%;
+          right: 5px;
+          display: none;
+          background: #d9d9d9;
+          border-radius: 50%;
+          opacity: 0.5;
+          transform: translate(0, -50%);
+        }
+
+        &:not(.tags-view-item-affix):hover {
+          .tags-view-item-close {
+            display: block;
+          }
+        }
+      }
+
+      .tags-view-item:not(.is-active) {
+        &:hover {
+          color: var(--el-color-primary);
+        }
+      }
+
+      .tags-view-item.is-active {
+        color: var(--el-color-white);
+        background-color: var(--el-color-primary);
+        border: 1px solid var(--el-color-primary);
+
+        .tags-view-item-close {
+          :deep(span) {
+            color: var(--el-color-white) !important;
+          }
+        }
+      }
+    }
+  }
+
+
+  .layout-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--xht-main-bg-color);
+
+    // 内层 el-scrollbar样式，用于界面高度自适应（main.vue）
+    .layout-main-scrollbar {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .layout-main-parent {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        position: relative;
+      }
+    }
+  }
+
+  .layout-footer {
+    background-color: var(--xht-main-bg-color);
+    height: $footer-height;
+    padding: 0;
+    @extend .flex-center;
+  }
+}

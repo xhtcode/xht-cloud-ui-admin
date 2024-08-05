@@ -1,0 +1,10 @@
+/* 自定义按钮特效
+------------------------------- */
+.button-hover {
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    background: var(--xht-button-hover-bg-color);
+  }
+}

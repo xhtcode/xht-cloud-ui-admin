@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/**暗黑主题*/
+html.dark {
+  color-scheme: dark;
+  --xht-text-color: #e5eaf3;
+  --xht-bg-color: #141414;
+  --xht-main-bg-color: #1f1f1f;
+  --xht-border-color: #333333;
+  --xht-card-bg-color: rgba(16, 13, 13, 0.68);
+  --xht-card-border-color: #333333;
+  --xht-button-hover-bg-color: rgb(255 255 255 / 20%);
+}

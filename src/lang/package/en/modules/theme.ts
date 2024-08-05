@@ -1,0 +1,23 @@
+export default {
+    project: "Project Settings",
+    theme: "Theme",
+    interface: "Interface",
+    navigation: "Navigation",
+    themeColor: "Theme Color",
+    tagsViewStatus: "Tags View",
+    fixedHeader: "Fixed Header",
+    sidebarLogo: "Sidebar Logo",
+    watermark: "Watermark",
+    changeSizeType: `Size  Switch successful!`,
+    changeDarkStatus: 'Switching theme display ',
+    changeColorType: 'Switching theme default color ',
+    tagsView: {
+        refresh: 'Refresh',
+        close: 'Close',
+        closeOther: 'Close Other',
+        closeAll: 'Close All',
+        fullscreen: 'Fullscreen',
+        closeFullscreen: 'Close Fullscreen',
+        favorite: 'Favorite',
+    },
+}

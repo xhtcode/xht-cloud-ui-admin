@@ -1,0 +1,51 @@
+.custom-tree-container-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  user-select: none;
+
+  .custom-tree-container-container-filter {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    .custom-tree-container-container-input {
+      width: 95%;
+    }
+
+    .custom-tree-container-container-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      cursor: pointer;
+
+      &:hover {
+        .el-icon {
+          font-weight: bold;
+          color: var(--el-button-hover-bg-color) !important;
+        }
+      }
+    }
+
+    .el-icon {
+      color: gainsboro;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: bold;
+        color: var(--el-button-hover-bg-color) !important;
+      }
+    }
+  }
+
+  .custom-tree-container-container-tree {
+    display: flex;
+    flex: 10;
+    width: 100%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,7 @@
+// src/styles/variables.module.scss 导出 variables.scss 文件的变量
+:export {
+  headerHeight: $header-height;
+  footerHeight: $footer-height;
+  menuWidth64: $menu-width-64;
+  menuWidth200: $menu-width-200;
+}

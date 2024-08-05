@@ -1,0 +1,34 @@
+.el-table__empty-text,
+.el-tag__content,
+.el-drawer__header,
+.el-switch,
+.el-drawer__title,
+.el-divider__text,
+.el-tabs__item,
+.el-descriptions__title,
+.el-popconfirm,
+.el-overlay,
+.el-form-item__label,
+.el-descriptions__label {
+  user-select: none;
+}
+
+.el-dropdown-menu {
+  .el-dropdown-menu__item {
+    justify-content: space-between;
+  }
+}
+
+.el-descriptions-title-center {
+  .el-descriptions__title {
+    text-align: center;
+    flex: 1;
+  }
+
+}
+
+.el-menu {
+  .el-menu-item.is-active {
+    background-color: var(--el-color-primary-light-9) !important;
+  }
+}

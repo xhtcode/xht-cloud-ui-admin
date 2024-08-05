@@ -1,0 +1,23 @@
+export default {
+    project: "项目配置",
+    theme: "主题设置",
+    interface: "界面设置",
+    navigation: "导航设置",
+    themeColor: "主题颜色",
+    tagsViewStatus: "开启 Tags-View",
+    fixedHeader: "固定 Header",
+    sidebarLogo: "侧边栏 Logo",
+    watermark: "开启水印",
+    changeSizeType: `尺寸切换成功！`,
+    changeDarkStatus: '正在切换主题显示',
+    changeColorType: '正在切换主题默认颜色',
+    tagsView: {
+        refresh: '刷新',
+        close: '关闭',
+        closeOther: '关闭其它',
+        closeAll: '全部关闭',
+        fullscreen: '当前页全屏',
+        closeFullscreen: '关闭全屏',
+        favorite: '收藏',
+    },
+}

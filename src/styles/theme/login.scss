@@ -1,0 +1,162 @@
+html.dark {
+  .login-container {
+    .hover-text-color {
+      color: #CFD3DC !important;
+    }
+
+    .login-other-image {
+    }
+  }
+}
+
+.login-container {
+  background-size: cover;
+
+  .login-dark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .login-main {
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    @extend .flex;
+    overflow: hidden;
+
+    .login-item-left {
+      height: 100vh;
+      background: url("@/assets/images/login-bg.svg");
+      opacity: 0.9;
+      background-size: cover;
+      flex: 1;
+      display: flex;
+      padding: 20px;
+    }
+
+
+    .login-item-right {
+      height: 100vh;
+      flex: 2;
+      @extend .flex-center;
+
+      .login-box-content {
+        width: 480px;
+        height: 80vh;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(126, 134, 142, 0.16);
+        box-shadow: 0 4px 14px 0 rgba(126, 134, 142, .16);
+        position: relative;
+
+        .login-box-header {
+          padding: 20px;
+          @extend .flex-center;
+
+          .login-box-header-image {
+            width: 2vmax;
+            height: 2vmax;
+          }
+
+          .login-box-header-title {
+            font-family: '楷体', serif;
+            font-weight: bold;
+            font-size: 1.5vmax;
+            line-height: 2.3vmax;
+          }
+        }
+
+        .login-box-main {
+          padding-top: 20px;
+
+          .login-code-image {
+            @extend .flex;
+            justify-content: center;
+            height: var(--el-input-height);
+
+            img {
+              width: 80%;
+              height: var(--el-component-size-large);
+              vertical-align: middle;
+              cursor: pointer;
+              margin-bottom: 22px;
+            }
+          }
+
+          .login-other {
+            .login-other-image {
+              border: 1px solid rgba(126, 134, 142, 0.16);
+              padding: 10px;
+              margin: 10px;
+              cursor: pointer;
+              border-radius: 20px;
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+
+        .login-box-footer {
+          @extend .flex-center;
+          padding: 20px;
+        }
+      }
+    }
+
+  }
+
+  .hover-text-color {
+    color: rgba(23, 26, 29, .6);
+  }
+
+  .login-footer {
+    width: 66vw;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    user-select: none;
+    font-size: 12px;
+    text-align: left;
+
+    .login-footer-right {
+      display: flex;
+
+      .hover-text-color {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (width <= 720px) {
+  .login-item-left {
+    display: none !important;
+  }
+  .login-box-content {
+    width: 80% !important;
+  }
+  .login-box-header {
+    .login-box-header-image {
+      width: 4.5vmax !important;
+      height: 4.5vmax !important;
+    }
+
+    .login-box-header-title {
+      font-size: 4vmax !important;
+      line-height: 4vmax !important;
+    }
+  }
+  .login-footer {
+    width: 100vw !important;
+
+    .hover-text-color {
+      font-size: 12px !important;
+    }
+  }
+
+}

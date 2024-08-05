@@ -1,0 +1,96 @@
+.icon-box {
+  width: 100%;
+
+  .el-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--el-text-color-regular);
+  }
+
+  :deep(.el-dialog__body) {
+    padding: 25px 20px 20px;
+
+    .el-input {
+      margin-bottom: 10px;
+
+      .el-input__validateIcon {
+        display: none !important;
+      }
+    }
+
+    .icon-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 100px);
+      justify-content: space-evenly;
+      min-height: 30vh;
+      max-height: 50vh;
+
+      .icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          svg {
+            transform: scale(2);
+          }
+        }
+
+        p {
+          text-align: center;
+          white-space: pre-line;
+        }
+      }
+    }
+  }
+}
+
+.user-select-container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-select-container {
+  box-sizing: border-box;
+  display: flex;
+  height: 50vh;
+
+  .user-select-item {
+    padding: 10px;
+    overflow: hidden;
+    color: var(--el-text-color-primary);
+    border: 1.5px solid var(--el-border-color);
+    border-radius: var(--el-border-radius-base);
+    transition: var(--el-transition-duration);
+  }
+
+  .user-select-dept {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .user-select-main {
+    flex: 4;
+    height: 100%;
+    margin: 0 10px;
+  }
+
+  .user-select-view {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+    user-select: text;
+
+    :deep(.el-tag) {
+      justify-content: space-between
+    }
+  }
+}
